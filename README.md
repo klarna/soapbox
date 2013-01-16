@@ -14,18 +14,18 @@ a large Erlang system.
 
 A SoapBox interface has several components:
 
-* The transport is responsible for shuffling bytes to and from the
-  service via some network connection.
+The transport is responsible for shuffling bytes to and from the
+service via some network connection.
 
-* A stub is responsible for marshalling and unmarshalling data it
-  receives from the transport, dispatch, logging, and optionally guiding
-  the evaluation of an RPC call in certain ways.
+A stub is responsible for marshalling and unmarshalling data it
+receives from the transport, dispatch, logging, and optionally guiding
+the evaluation of an RPC call in certain ways.
 
-* Each call is implemented by a method. Methods follow standard Erlang
-  conventions and may be shared across transports and stubs. Methods
-  have an input-signature based on types. Types provide code
-  which the SoapBox type-checker uses to determine type-membership of
-  input values.
+Each call is implemented by a method. Methods follow standard Erlang
+conventions and may be shared across transports and stubs. Methods
+have an input-signature based on types. Types provide code
+which the SoapBox type-checker uses to determine type-membership of
+input values.
 
     Transport_0 ... Transport_N ... Transport_M
           \        /  \           /
