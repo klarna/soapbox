@@ -76,11 +76,11 @@ spec/1:
   3. Optionally, a SoapBox object-literal giving the type-parameters.
 
   Example:
-  [ title, { json:json_get("title", Args), foo_type_string },
-    price, { json:json_get("price", Args), foo_type_float,
-             [min, 0.0, max, 100.0]
-           }
-  ]
+    [ title, { json:json_get("title", Args), foo_type_string }
+    , price, { json:json_get("price", Args), foo_type_float,
+               [min, 0.0, max, 100.0]
+             }
+    ]
 
 verify/1:
   Accepts one argument: Args. Args is a SoapBox object containing the
@@ -291,21 +291,22 @@ rewrite/0:
 
 ## Installation
 jakob@hesitant.primat.es:~/git/klarna/soapbox$ gmake
+
 jakob@hesitant.primat.es:~/git/klarna/soapbox$ gmake test
 
 ## Manifest
-include/:
-soapbox_test.hrl           -- assert macros
+* include/:
+   * soapbox_test.hrl           -- assert macros
 
-src/:
-soapbox.erl                -- API and general control-flow
-soapbox_method.erl         -- Method behaviour
-soapbox_obj.erl            -- Object ADT
-soapbox_stub.erl           -- Stub behaviour
-soapbox_test.erl           -- Utility functions for writing test cases
-soapbox_transport.erl      -- Transport behaviour
-soapbox_type.erl           -- Type checker
-soapbox_type_alias.erl     -- Type-alias behaviour
-soapbox_type_list.erl      -- List-type behaviour
-soapbox_type_object.erl    -- Object-type behaviour
-soapbox_type_primitive.erl -- Primitive-type behaviour
+* src/:
+    * soapbox.erl                -- API and general control-flow
+    * soapbox_method.erl         -- Method behaviour
+    * soapbox_obj.erl            -- Object ADT
+    * soapbox_stub.erl           -- Stub behaviour
+    * soapbox_test.erl           -- Utility functions for writing test cases
+    * soapbox_transport.erl      -- Transport behaviour
+    * soapbox_type.erl           -- Type checker
+    * soapbox_type_alias.erl     -- Type-alias behaviour
+    * soapbox_type_list.erl      -- List-type behaviour
+    * soapbox_type_object.erl    -- Object-type behaviour
+    * soapbox_type_primitive.erl -- Primitive-type behaviour
