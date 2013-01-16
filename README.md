@@ -14,14 +14,14 @@ a large Erlang system.
 
 A SoapBox interface has several components:
 
-- The transport is responsible for shuffling bytes to and from the
+* The transport is responsible for shuffling bytes to and from the
   service via some network connection.
 
-- A stub is responsible for marshalling and unmarshalling data it
+* A stub is responsible for marshalling and unmarshalling data it
   receives from the transport, dispatch, logging, and optionally guiding
   the evaluation of an RPC call in certain ways.
 
-- Each call is implemented by a method. Methods follow standard Erlang
+* Each call is implemented by a method. Methods follow standard Erlang
   conventions and may be shared across transports and stubs. Methods
   have an input-signature based on types. Types provide code
   which the SoapBox type-checker uses to determine type-membership of
@@ -54,8 +54,8 @@ Input is converted into SoapBox-objects as soon as possible and kept in
 that format from there on out.
 
 SoapBox was written by Jakob Sievers, with contributions by
-  Daniel K. Lee (/dklee) (routing)
-  Kevin Albrecht (/onlyafly) (documentation)
+* Daniel K. Lee (/dklee) (routing)
+* Kevin Albrecht (/onlyafly) (documentation)
 
 ## Writing Components
 ### Methods
