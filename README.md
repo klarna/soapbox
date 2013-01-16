@@ -27,24 +27,24 @@ A SoapBox interface has several components:
   which the SoapBox type-checker uses to determine type-membership of
   input values.
 
-  Transport_0 ... Transport_N ... Transport_M
-        \        /  \           /
-         \      /    \         /
-          \    /      \       /
-          Stub_0 ...   Stub_N
-            |  \      /  |
-            |   \    /   |
-            |    \  /    |
-            |     \/     |
-            |     /\     |
-        Method_0 ... Method_N
-            |   \    /   |
-            |    \  /    |
-            |     \/     |
-            |     /\     |
-          Type_0 ... Type_1
+    Transport_0 ... Transport_N ... Transport_M
+          \        /  \           /
+           \      /    \         /
+            \    /      \       /
+            Stub_0 ...   Stub_N
+              |  \      /  |
+              |   \    /   |
+              |    \  /    |
+              |     \/     |
+              |     /\     |
+          Method_0 ... Method_N
+              |   \    /   |
+              |    \  /    |
+              |     \/     |
+              |     /\     |
+            Type_0 ... Type_1
 
-  Figure1: Code-reuse enabled by SoapBox
+    Figure1: Code-reuse enabled by SoapBox
 
 A stub may handle the data-conversion required by one or more
 transports. Each Method may be dispatched to by one or more
