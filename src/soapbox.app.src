@@ -1,5 +1,0 @@
-{application, soapbox, [ {description,  "SoapBox"}
-                       , {vsn,          git}
-                       , {registered,   []}
-                       , {applications, [kernel, stdlib]}
-                       ]}.
